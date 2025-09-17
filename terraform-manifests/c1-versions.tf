@@ -10,5 +10,5 @@ terraform {
 
 provider "google" {
   project = "cks-gcp"
-  region = ""
+  region = "europe-north2"
 }
