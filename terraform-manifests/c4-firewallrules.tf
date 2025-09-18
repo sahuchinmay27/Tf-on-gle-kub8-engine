@@ -4,7 +4,7 @@ resource "google_compute_firewall" "fw_ssh" {
     ports = ["22"]
     protocol = "tcp"
   }
-  direction = "ingress"
+  direction = "INGRESS"
   network = google_compute_network.myvpc.id
   source_ranges = ["0.0.0.0/0"]
   target_tags = ["ssh-tag"]
@@ -16,7 +16,7 @@ resource "google_compute_firewall" "fw_http" {
     ports = ["80"]
     protocol = "tcp"
   }
-  direction = "ingress"
+  direction = "INGRESS"
   network = google_compute_network.myvpc.id
   source_ranges = ["0.0.0.0/0"]
   target_tags = ["webserver-tag"]
